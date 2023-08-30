@@ -1,0 +1,133 @@
+:root {
+  --color-white: #ffffff;
+  --color-body: #c7c7c7;
+  --color-black: #000000;
+  --color-highlight: #f4f9f4;
+  --color-lightGrey: #b6b6b6;
+  --color-red: red;
+
+  --grid-gap: 20px;
+
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: var(--color-black);
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  padding: 20px;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  background-color: var(--color-body);
+  border: none;
+  color: var(--color-black);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid var(--color-black);
+
+  height: 40px;
+}
+
+.container {
+  background-color: var(--color-body);
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto 1fr;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: var(--grid-gap);
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bookGrid p {
+  border: 2px solid var(--color-black);
+  border-radius: 2px;
+  padding: 5px;
+  grid-column: span 1;
+  margin: 0;
+  font-size: 0.9em;
+  border-radius: 2px;
+}
+
+.bookGrid .numbers {
+  gap: var(--grid-gap);
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.bookGrid .tag {
+  color: var(--color-lightGrey);
+  border: 2px solid var(--color-lightGrey);
+}
+
+.bookGrid .bar {
+  border: 2px solid var(--color-black);
+  height: 2em;
+  grid-column: span 2;
+  border-radius: 2px;
+}
+
+.bookGrid .prog {
+  background-color: blue;
+  height: 2em;
+  grid-column: span 2;
+  width: 80%;
+}
+
+.bookGrid .buts {
+  grid-column: span 2;
+  display: flex;
+  gap: 10px;
+}
+
+.bookGrid .buts button {
+  flex: 1;
+}
+
+.add {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  color: var(--color-lightGrey);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  
+}
