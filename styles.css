@@ -26,7 +26,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  background-color: var(--color-body);
+
 }
 
 .header {
@@ -58,7 +59,8 @@ button {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 300px;
+  grid-auto-rows: 300px;
   padding: 20px;
   gap: 20px;
   border-radius: 5px;
@@ -105,7 +107,7 @@ button {
 }
 
 .bookGrid .prog {
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   height: 2em;
   grid-column: span 2;
   width: 80%;
@@ -123,11 +125,66 @@ button {
 
 .add {
   background-color: var(--color-white);
+  padding: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add button {
+  background-color: var(--color-white);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 10em;
   color: var(--color-lightGrey);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border: 0;
+}
+
+button:focus {
+    outline: none;
+  }
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align elements to the start of the column */
+  gap: 10px;
+}
+
+
+
+input[type="text"],
+.input input[type="email"],
+.input input[type="password"],
+.input input[type="number"],
+.input input[type="tel"],
+input[type="number" i] {
   
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 5px;
+    
+}
+
+input::placeholder {
+    color:  #8686868f;
+  }
+  
+
+.submit {
+    width: 100%;
+    border: 0px solid var(--color-black);
+    background-color: #9FFF9C;
+    font-weight: bold;
+}
+
+
+.modal {
+    border-radius:3px;
+    border: 0px;
+
 }

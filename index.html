@@ -12,7 +12,6 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <div class="header">
@@ -21,36 +20,37 @@
     </div>
 
     <div class="container">
-    
-         
-      <div class="bookGrid">
-        <p class="tag">Title</p>
-        <p class="title">A little Life</p>
-        <p class="tag">Name</p>
-        <p class="author">Gunu Punu</p>
-        <div class="numbers">
-          <p class="tag">Page</p>
-          <p class="total">11</p>
-          <p class="tag">Length</p>
-          <p class="total">120</p>
-        </div>
-        <div class="bar">
-            <div class="prog"></div>
-        </div>
+      
 
-        <div class="buts">
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
+      
 
-
-
-
+      <div class="add">
+        <button id="open-button">+</button>
       </div>
-   
-      <div class="add">+</div>
+
+      <div class="book"></div>
       <div class="book"></div>
       <div class="book"></div>
     </div>
+
+    <dialog class="modal" id="modal">
+      <form id="addBook">
+
+            <h2> ADD NEW BOOK</h2>
+       
+          <input type="text" id="title" name="title" placeholder="Book Title"/>
+   
+     
+          <input type="text" id="author" name="author" placeholder="Book Author" />
+   
+
+          <input type="number" id="total-pages" name="total-pages" placeholder="Total Pages" />
+      
+          <input type="number" id="current-page" name="current-page" placeholder="Current Page"/>
+    
+        <button class="submit" type="submit">Submit</button>
+      </form>
+    </dialog>
   </body>
+  <script src="script.js"></script>
 </html>
